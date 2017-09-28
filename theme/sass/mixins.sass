@@ -1,0 +1,39 @@
+@mixin transition($transition)
+  -webkit-transition: $transition
+  -moz-transition: $transition
+  -o-transition: $transition
+  transition: $transition
+
+@mixin background-cover
+  background-position: center center
+  background-repeat: no-repeat
+  -webkit-background-size: cover
+  -moz-background-size: cover
+  -o-background-size: cover
+  background-size: cover
+  -webkit-print-color-adjust: exact
+
+@mixin background-asset-url($url)
+  @include background-cover
+  background-image: url(https://www.yourwelcome.com/content/dashboard/code-test/#{$url})
+  -webkit-print-color-adjust: exact
+
+
+@mixin button
+  @include transition(background-color 300ms ease)
+
+@mixin button-grey
+  @include transition(background-color 300ms ease)
+  background-color: $background-grey
+  box-shadow: 0px 0px 2px 0.1px rgba(0,0,0,0.75)
+  color: $copy
+  padding: $spacer
+  border-radius: 3px
+  &:hover,
+  &:active
+    @include transition(color 250ms ease)
+    background-color: darken($background-grey, 5%)
+    box-shadow: 0px 0px 3px 0.5px rgba(0,0,0,0.75)
+    color: $copy
+    padding: $spacer
+    border-radius: 3px

@@ -1,0 +1,122 @@
+@import 'variables'
+@import 'mixins'
+
+.header
+  border-bottom: 1px solid $brand-grey
+  clear: both
+  overflow: hidden
+  padding: $double-spacer
+  .logo
+    @include background-asset-url('yw-logo-pink.png')
+    float: left
+    height: 30px
+    width: 170px
+    margin-top: 5px
+
+  .menu
+    float: right
+    padding: $spacer
+    a
+      color: $copy
+      font-size: 1.15em
+      &.active
+        color: $brand-primary
+
+.central-content
+  .not-found
+    margin: 100px 0
+    text-align: center
+
+
+.vacationTablet
+  .content-img
+  @include background-asset-url('header-hero.jpg')
+  background-position: top center
+  height: 420px
+  .subscribe
+    @include button
+  .features
+    @include button-grey
+    margin-left: 10px
+
+.partners
+  text-align: center
+  font-family: $titleFont
+  padding: $spacer
+.logos
+  display: inline-block
+  height: 10%
+  width: 10%
+  margin: 20px 20px 50px 30px
+
+
+.earnMore
+  background-color: $background-grey
+  .left
+    @include background-asset-url('earn-more-cropped.jpg')
+    height: 400px
+    width: 35%
+    float: left
+  .ownerServices
+    @include button
+  .ticketsAndDeals
+    @include button
+    margin-left: 10px
+
+.divider
+  height: 10px
+
+.reduceCallOuts
+  .right
+    @include background-asset-url('call-outs-cropped.png')
+    height: 400px
+    width: 35%
+    float: right
+  .propertyGuides
+    @include button
+
+
+.howItWorks
+  text-align: center
+  color: white
+  padding: $spacer*4
+  .content-img
+  @include background-asset-url('how-it-works.jpg')
+  background-position: top center
+  height: 250px
+  .content-copy p
+      margin-left: 22%
+      width: 55%
+  .findOutMore
+    @include button
+
+
+
+.social-media
+  float: right
+  display: inline-flex
+
+.footer
+  background: $brand-primary
+  clear: both
+  color: $card-background
+  overflow: hidden
+  padding: $spacer-ten/2
+
+  .footer-wrapper
+    clear: both
+    overflow: hidden
+    margin: 0 auto
+    width: 80%
+    padding: $spacer
+  .footer-logo
+    @include background-asset-url('yw-logo-white-book.png')
+    height: 70px
+    width: 100px
+    margin-left: 20px
+  .footer-col
+    float: left
+    width: 25%
+
+  a
+    color: $card-background

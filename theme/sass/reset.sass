@@ -1,0 +1,82 @@
+@import 'variables'
+@import 'mixins'
+
+html,
+body
+  height: 100%
+  width: 100%
+
+body
+  -moz-osx-font-smoothing: grayscale
+  -webkit-font-smoothing: antialiased
+  color: $copy
+  font-family: $regularFont
+  font-weight: 300
+
+h2
+  font-family: $titleFont
+  margin-bottom: 20px
+
+.footer h4
+  font-family: $titleFont
+  font-weight: 600
+
+.vacationTablet h2
+  font-size: 2.2em
+
+.vacationTablet .content-copy
+  margin-left: 52%
+  width: 40%
+  padding: $triple-spacer
+  padding-top: 7%
+
+
+.earnMore .content-copy
+  margin-left: 40%
+  padding: $spacer-ten
+  width: 65%
+
+
+.reduceCallOuts .content-copy
+  padding: $spacer-ten
+  width: 65%
+
+p
+  margin-bottom: 20px
+
+
+body
+  margin: 0
+  padding: 0
+
+.content
+  clear: both
+  overflow-y: hidden
+
+ul
+  margin: 0
+  padding: 0
+  li
+    list-style: none
+
+span
+  padding: $spacer*2
+
+
+.howItWorks a , .reduceCallOuts a, .earnMore a, .vacationTablet a
+  @include transition(color 250ms ease)
+  background-color: $brand-primary
+  box-shadow: 0px 0px 3px 0.5px rgba(0,0,0,0.75)
+  color: white
+  padding: $spacer
+  border-radius: 3px
+  cursor: pointer
+  text-decoration: none
+  &:hover,
+  &:active
+    @include transition(color 250ms ease)
+    background-color: darken($brand-primary, 5%)
+    box-shadow: 0px 0px 3px 0.5px rgba(0,0,0,0.75)
+    color: white
+    padding: $spacer
+    border-radius: 3px
